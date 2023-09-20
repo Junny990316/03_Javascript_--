@@ -11,11 +11,11 @@
          }
        a();
        
-       //arrow 표현식
-       var a2 = ()=>{
+       var a2 = (msg) => {
     	   console.log("a2");  
+          return msg + ">>>";
        };
-       a2();
+       console.log(a2('화살표함수'));
        
 </script>
 </head>
