@@ -9,19 +9,19 @@
 	    
 	 */
   function a(){
-		console.log("a");
+		console.log("부모");
 	}
   function b(){
-		console.log("b");
+		console.log("자식");
 		event.stopPropagation();  //이벤트 전파 방지 메서드
 	}
 </script>
 </head>
 <body>
 	<div id="a" onclick="a()" style="background-color:#ff0000">
-	   a
+	   부모
 	  <div id="b" onclick="b()" style="background-color:#00ff00">
-	 	b 
+	 	자식
 	  </div>
 	</div>
 

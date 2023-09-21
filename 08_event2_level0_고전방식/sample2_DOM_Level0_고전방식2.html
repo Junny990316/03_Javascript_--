@@ -4,6 +4,7 @@
 <script type="text/javascript">
     
     //고전 이벤트
+	// onload 이벤트 헨들러를 함수선언문 형태로 구현했기 때문에 함수 이름을 대입한다.
      window.onload = init;
     // window.onload = init();
     
@@ -11,7 +12,7 @@
     	console.log("모든 html이 모두 DOM으로 생성된후 실행");
     	
     	document.getElementById("xxx").onclick=function(){
-    		console.log("xxx() 호출");
+    		console.log("onclick() 호출");
     	};
     	document.getElementById("xxx").onmouseover=function(){
     		console.log("onmouseover");

@@ -28,8 +28,8 @@
 	      onclick="함수호출"
 	 */
 
-	function a() {
-		console.log("a")
+	function a(eventType) {
+		console.log("발생한 event 종류 " + eventType);
 	}
 	function b() {
 		console.log("b")
@@ -41,11 +41,11 @@
 </head>
 <body>
 
-	<button onclick="a()">Click</button>
+	<button onclick="a('click')">Click</button>
 	<br>
-	<button onmouseover="a()">MouseOver</button>
+	<button onmouseover="a('MouseOver')">MouseOver</button>
 	<br>
-	<button onmouseout="a()">MouseOut</button>
+	<button onmouseout="a('MouseOut')">MouseOut</button>
 	<br>
 	<button onclick="a()" onmouseout="a()">OK4</button>
 	<br>

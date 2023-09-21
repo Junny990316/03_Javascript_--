@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript">
-	/*
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript">
+      /*
 	    이벤트(event)
 	   1) 이벤트는 사용자가 발생시킨 사건.
 	   예> 버튼클릭, input태그에 값입력,....
@@ -36,21 +36,50 @@
 	    
 	 */
 
-	function a(e, x) {
-		console.log("a",e, x);
-		console.log("a",e.target, e.target.innerHTML,e.target.innerText); //이벤트 소스
-	}
-	function b(){
-		console.log("b", event); // 함수안에서 이벤트 객체는 event에 저장됨.
-	}
+      function a(e, x) {
+        console.log("a", e, x);
+        console.log("a", e.target, e.target.innerHTML, e.target.innerText); //이벤트 소스
+      }
 
-</script>
-</head>
-<body>
-	<button onclick="a(event, 100)">OK1</button><br>
-	<button onclick="b()">OK2</button><br>
-</body>
+      function b(value) {
+        console.log("b", value); // 함수안에서 이벤트 객체는 event에 저장됨.
+        console.log(event.target);
+        console.log(event.target.innerText);
+      }
+
+
+	  window.onload = function() {
+		  document.getElementById("addBtn").onclick = function() {
+		  	addUser();
+		  };
+
+		  function addUser() {
+		  	var name = document.getElementById("myName").value;
+		  	console.log(name);
+		  }
+		  
+	  };
+
+    </script>
+  </head>
+  <body>
+    <button onclick="a(event, 100)">OK1</button><br />
+    <button onclick="b(200)">OK2</button><br />
+
+    userName : <input type="text" id="myName" placeholder="name" />
+    <button id="addBtn">register</button>
+
+    <!-- <script type="text/javascript">
+      function addUser(event) {
+        var name = document.getElementById("myName").value;
+        // console.dir(nameObj);
+        console.log(typeof nameObj);
+      };
+
+      function addUser() {
+        var name = document.getElementById("myName").value;
+        console.log(name);
+      }
+    </script> -->
+  </body>
 </html>
-
-
-

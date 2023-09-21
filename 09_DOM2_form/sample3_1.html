@@ -6,8 +6,11 @@
 <script type="text/javascript">
 function aaa2() {
 	
-	var id = document.getElementById("userid").value;	
-	if(id.length == 0){	
+	var userObj = document.getElementById("userid");	
+	var userId = userObj.value;
+	if(userId.length == 0){	
+		alert("Id 값을 입력하세요");
+		userObj.focus();
 		return false;
 	}else{
 		return true;
@@ -27,7 +30,7 @@ function aaa2() {
 </head>
 <body>
 	<form name="xForm" id="myForm" action="target.html"
-	   onsubmit="return aaa()">
+	   onsubmit="return aaa2()">
 		아이디:<input type="text" name="userid"
       id="userid"><br>
 	   <input type="submit" value="전송1">

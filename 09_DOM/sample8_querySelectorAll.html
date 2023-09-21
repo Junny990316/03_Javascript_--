@@ -17,8 +17,9 @@
     //document.querySelectAll("css선택자")
 	var lis = document.querySelectorAll("li");
 	var sum=0;
-	for(var n of lis){
-		sum+=parseInt(n.innerText);
+  
+	for(var liElement of lis){
+		sum += parseInt(liElement.innerText);
 	}
 	document.getElementById("result").innerText= sum;
 </script>

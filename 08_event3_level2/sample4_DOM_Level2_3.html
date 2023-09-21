@@ -6,7 +6,7 @@
     window.onload = function(){
     	
        /*
-          true로 지정하면 이벤트캡쳐링되기 때문에
+          true로 지정하면 이벤트캡쳐링 되기 때문에
           부모인 a 가 먼저 출력되고 자식인 b 순서로 출력된다.
 
           false로 지정하면 이벤트 버블링되기 때문에
@@ -21,6 +21,7 @@
          var b = document.getElementById('b');
          b.addEventListener("click", function(){
             console.log("b")
+            event.stopPropagation();
          } , false);
 
      };
