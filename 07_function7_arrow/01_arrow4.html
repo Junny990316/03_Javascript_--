@@ -14,6 +14,23 @@
        // 실행블럭이 아닌 표현식으로 인식시키기 위해서 ({}) 형태로 사용해야 된다.
        var a2 = ()=> ({ 'key':'홍길동'} );
        console.log(a2());  // Object {key: "홍길동"}
+
+       var v3 = () => {
+              // object literal
+              return { 'key' : '홍길동' };
+       };
+       console.log(a3());
+
+       function getPerson(name, addr) {
+              return {
+                     name,
+                     addr
+              };
+       };
+       var person = getPerson("Jason", "house");
+
+       const person2 = (name, addr) => ( {name, addr} );
+                                     //() 는 return을 의미
 </script>
 </head>
 <body>
